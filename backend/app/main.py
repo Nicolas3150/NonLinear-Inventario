@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routers import producto_router
 
 app = FastAPI(
     title="Sistema de Inventario",
@@ -9,11 +10,14 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # En producción se restringe a dominios específicos
+    allow_origins=["*"],  # En producción se restringe a dominios específicos
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(producto_router.router)
+
 
 @app.get("/")
 def root():
