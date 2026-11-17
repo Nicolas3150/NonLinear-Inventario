@@ -1,0 +1,80 @@
+.grafico-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.grafico-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.grafico-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.grafico-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.grafico-badge-actualizado {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--surface-subtle);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Contenedor del gráfico de barras */
+.grafico-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 180px;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.grafico-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.grafico-barra {
+  width: 36px;
+  background-color: var(--color-primary);
+  border-radius: 6px 6px 0 0;
+  transition:
+    height 0.4s ease,
+    background-color 0.2s ease;
+}
+
+.grafico-barra:hover {
+  background-color: #2563eb;
+}
+
+.grafico-etiqueta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  text-align: center;
+  white-space: nowrap;
+}
