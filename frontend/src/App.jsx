@@ -3,6 +3,7 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Header } from "./components/Header/Header";
 import { TablaProductos } from "./components/TablaProductos/TablaProductos";
 import { VistaResumen } from "./components/VistaResumen/VistaResumen";
+import { ModalMovimiento } from "./components/ModalMovimiento/ModalMovimiento";
 
 // Configuración centralizada de encabezados por vista
 const CONFIG_VISTAS = {
@@ -31,14 +32,10 @@ const CONFIG_VISTAS = {
 export default function App() {
   // Arrancamos en "resumen" como vista por defecto (o "productos" mientras armamos el dashboard)
   const [vistaActual, setVistaActual] = useState("productos");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Obtenemos los textos dinámicos según la vista activa
   const headerActual = CONFIG_VISTAS[vistaActual] || CONFIG_VISTAS.resumen;
-
-  const handleAbrirMovimiento = () => {
-    console.log("Abrir modal de registrar movimiento");
-    // Aquí conectaremos el estado del modal más adelante
-  };
 
   return (
     <div
@@ -65,12 +62,17 @@ export default function App() {
         <Header
           subtitulo={headerActual.subtitulo}
           titulo={headerActual.titulo}
-          onOpenMovimiento={handleAbrirMovimiento}
+          onOpenMovimiento={() => setIsModalOpen(true)}
         />
 
         {/* Renderizado condicional de las vistas */}
         {vistaActual === "resumen" && <VistaResumen />}
         {vistaActual === "productos" && <TablaProductos />}
+
+        <ModalMovimiento 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
       </main>
     </div>
   );
