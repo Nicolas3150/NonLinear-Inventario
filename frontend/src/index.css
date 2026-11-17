@@ -31,6 +31,12 @@
   --category-warning-text: #c2410c;
   --category-info-bg: #ecfeff;
   --category-info-text: #0369a1;
+
+  --color-primary-soft: #eff6ff;
+  --color-success: #10b981;
+  --color-success-soft: #ecfdf5;
+  --color-purple: #8b5cf6;
+  --color-purple-soft: #f5f3ff;
 }
 
 * {
