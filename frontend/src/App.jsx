@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Header } from "./components/Header/Header";
 import { TablaProductos } from "./components/TablaProductos/TablaProductos";
+import { VistaResumen } from "./components/VistaResumen/VistaResumen";
 
 // Configuración centralizada de encabezados por vista
 const CONFIG_VISTAS = {
@@ -68,13 +69,8 @@ export default function App() {
         />
 
         {/* Renderizado condicional de las vistas */}
+        {vistaActual === "resumen" && <VistaResumen />}
         {vistaActual === "productos" && <TablaProductos />}
-
-        {vistaActual === "resumen" && (
-          <div style={{ color: "var(--text-muted)" }}>
-            Aquí irá la Vista de Resumen (Dashboard)...
-          </div>
-        )}
       </main>
     </div>
   );

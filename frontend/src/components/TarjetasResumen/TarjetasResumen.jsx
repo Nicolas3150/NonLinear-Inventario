@@ -1,6 +1,6 @@
 /* src/components/TarjetasResumen.jsx */
 import { Box, TrendingUp, AlertTriangle, BarChart2 } from "lucide-react";
-import { PRODUCTOS_MOCK, CATEGORIAS_MOCK } from "../data/inventarioMock";
+import { PRODUCTOS_MOCK, CATEGORIAS_MOCK } from "../../data/inventarioMock";
 import "./TarjetasResumen.css";
 
 export function TarjetasResumen({ productos = PRODUCTOS_MOCK }) {

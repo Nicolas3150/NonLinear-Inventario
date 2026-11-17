@@ -1,5 +1,5 @@
 /* src/components/GraficoCategorias.jsx */
-import { PRODUCTOS_MOCK, CATEGORIAS_MOCK } from "../data/inventarioMock";
+import { PRODUCTOS_MOCK, CATEGORIAS_MOCK } from "../../data/inventarioMock";
 import "./GraficoCategorias.css";
 
 export function GraficoCategorias({ productos = PRODUCTOS_MOCK }) {
