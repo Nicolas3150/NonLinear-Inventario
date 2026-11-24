@@ -1,3 +1,15 @@
+/* Evita que el contenedor del gráfico o el SVG muestren el contorno negro al hacer clic */
+.grafico-card .recharts-wrapper,
+.grafico-card .recharts-surface,
+.grafico-card svg {
+  outline: none !important;
+}
+
+/* Asegura que al hacer foco tampoco se dibuje borde en elementos internos */
+.grafico-card *:focus {
+  outline: none !important;
+}
+
 .grafico-card {
   background: var(--bg-card);
   border-radius: 14px;

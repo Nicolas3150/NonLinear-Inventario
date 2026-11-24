@@ -30,8 +30,8 @@ const CONFIG_VISTAS = {
 };
 
 export default function App() {
-  // Arrancamos en "resumen" como vista por defecto (o "productos" mientras armamos el dashboard)
-  const [vistaActual, setVistaActual] = useState("productos");
+  // Arrancamos en "resumen" como vista por defecto (o "resumen" mientras armamos el dashboard)
+  const [vistaActual, setVistaActual] = useState("resumen");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Obtenemos los textos dinámicos según la vista activa
