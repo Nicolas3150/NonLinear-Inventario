@@ -1,0 +1,246 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.modal-container {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--surface-subtle);
+  color: var(--text-main);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-label-sub {
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+/* Selector de tipo de movimiento (Entrada / Salida) */
+.tipo-movimiento-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: var(--surface-subtle);
+  padding: 0.35rem;
+  border-radius: 10px;
+}
+
+.btn-tipo {
+  background: transparent;
+  border: none;
+  padding: 0.65rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-tipo.active.entrada {
+  background: var(--bg-card);
+  color: var(--color-success);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-tipo.active.salida {
+  background: var(--bg-card);
+  color: var(--color-danger);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Inputs generales del modal */
+.modal-input,
+.modal-select,
+.modal-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-action);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: var(--bg-card);
+  color: var(--text-main);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.modal-input:focus,
+.modal-select:focus,
+.modal-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input-helper {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Tarjeta de usuario activo */
+.user-badge-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--surface-subtle);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.user-badge-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-badge-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.user-badge-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.user-badge-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.session-active-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #475569;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* Footer del modal */
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  background: var(--surface-subtle);
+}
+
+.btn-secundario {
+  background: var(--bg-card);
+  border: 1px solid var(--border-action);
+  color: var(--text-secondary);
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-secundario:hover {
+  background: var(--border-color);
+}

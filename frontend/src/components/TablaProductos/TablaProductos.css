@@ -1,0 +1,215 @@
+.tabla-container {
+  background: var(--bg-card);
+  width: 100%;
+}
+
+.tabla-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.tabla-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.tabla-inventario {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-inventario th {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.tabla-inventario td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.producto-identidad {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.producto-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-icon);
+  background: var(--surface-subtle);
+  flex: 0 0 auto;
+}
+
+.tabla-inventario tbody .producto-icon.stock-bajo {
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+}
+
+.producto-nombre {
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.producto-codigo {
+  color: var(--text-subtle);
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.badge-categoria {
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--surface-subtle);
+}
+
+.categoria-seguridad {
+  color: var(--category-warning-text);
+  background: var(--category-warning-bg);
+}
+
+.categoria-electricidad {
+  color: var(--category-info-text);
+  background: var(--category-info-bg);
+}
+
+.stock-valor {
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.stock-valor.bajo {
+  color: var(--color-danger);
+}
+
+.badge-stock-bajo {
+  background: var(--color-danger-soft);
+  color: var(--color-danger-strong);
+  font-size: 0.7rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-left: 0.75rem;
+}
+
+.stock-minimo {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 0.15rem;
+}
+
+.acciones-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.btn-accion {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-action);
+  background: var(--bg-card);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-action);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.btn-accion:hover {
+  background: var(--bg-main);
+  border-color: var(--border-hover);
+}
+
+.btn-icon-editar {
+  background: transparent;
+  border: 0;
+  padding: 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-edit);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-icon-editar:hover {
+  background: var(--bg-main);
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+.tabla-controles {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.input-busqueda-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-busqueda-icono {
+  position: absolute;
+  left: 12px;
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+.input-busqueda {
+  padding: 0.6rem 0.75rem 0.6rem 2.4rem;
+  border: 1px solid var(--border-action);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+  background: var(--bg-card);
+  color: var(--text-main);
+  width: 240px;
+  transition: border-color 0.2s ease;
+}
+
+.input-busqueda:focus,
+.select-categoria:focus {
+  border-color: var(--color-primary);
+}
+
+.select-categoria {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border-action);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+  background: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.tabla-vacia {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--text-subtle);
+}

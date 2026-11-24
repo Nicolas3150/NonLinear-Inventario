@@ -1,0 +1,17 @@
+.vista-resumen {
+  display: flex;
+  flex-direction: column;
+}
+
+.resumen-panels-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .resumen-panels-grid {
+    grid-template-columns: 1fr;
+  }
+}

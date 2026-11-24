@@ -1,0 +1,138 @@
+.alerta-card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.alerta-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.35rem;
+}
+
+.alerta-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alerta-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  flex-shrink: 0;
+}
+
+.alerta-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.alerta-subtitle {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 0.2rem;
+}
+
+.alerta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.alerta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem;
+  background: #fbfcfe;
+  border: 1px solid #edf2f7;
+  border-radius: 15px;
+}
+
+.alerta-product-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #647a99;
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+}
+
+.alerta-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.alerta-item-nombre {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alerta-item-stock {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+}
+
+.alerta-stock-actual {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-danger-strong);
+}
+
+.alerta-stock-min {
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+}
+
+.alerta-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  color: #8ca0bd;
+  flex-shrink: 0;
+}
+
+.alerta-ok {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 520px) {
+  .alerta-card {
+    padding: 1.15rem;
+  }
+
+  .alerta-item-actions {
+    gap: 0.7rem;
+  }
+}
